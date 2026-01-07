@@ -1,10 +1,6 @@
-export function getMenu() {
+export function Menu() {
   const textContent = `  
-    <ul>
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-    </ul>
+    The menu
     `;
   const menu = document.createElement("div");
   menu.innerHTML = textContent;
