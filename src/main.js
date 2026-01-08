@@ -9,6 +9,7 @@ new (class Controller {
     this.cacheDom();
     this.bindEvents();
     this.pages = { Home, Menu, About };
+    this.render(this.pages["Home"]());
   }
 
   cacheDom() {
