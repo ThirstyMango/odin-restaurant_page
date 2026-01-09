@@ -8,8 +8,8 @@ new (class Controller {
   constructor() {
     this.cacheDom();
     this.bindEvents();
-    this.pages = { Home, Menu, About };
-    this.render(this.pages["Home"]());
+    this.pages = { Home: Home(), Menu: Menu(), About: About() };
+    this.render(this.pages["Home"]);
   }
 
   cacheDom() {
@@ -29,7 +29,7 @@ new (class Controller {
     this.highlightButton(btnClicked);
 
     const pageName = btnClicked.dataset.page;
-    const page = this.pages[pageName]();
+    const page = this.pages[pageName];
     this.render(page);
   }
 
