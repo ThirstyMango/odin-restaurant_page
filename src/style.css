@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --cl-light: white;
+  --cl-light: rgb(240, 239, 239);
   --cl-dark: rgb(97, 64, 39, 0.6);
   --spacing-xs: 0.2rem;
   --spacing-s: 0.4rem;
@@ -23,7 +23,7 @@ body {
   width: 36rem;
   padding: var(--spacing-m);
   background-color: var(--cl-dark);
-  color: white;
+  color: var(--cl-light);
   text-align: center;
 }
 
@@ -50,20 +50,24 @@ body {
   width: 6rem;
   cursor: pointer;
   border: none;
-  border-right: 2px solid white;
+  border-right: 2px solid var(--cl-light);
   transition: 100ms all ease-in-out;
   outline: none;
   background-color: transparent;
-  color: white;
+  color: var(--cl-light);
   font-weight: 600;
   font-size: 1.5rem;
 }
 
 .nav__btn:first-child {
-  border-left: 2px solid white;
+  border-left: 2px solid var(--cl-light);
 }
 
-.nav__btn--active,
+.nav__btn--active {
+  background-color: var(--cl-light);
+  color: var(--cl-dark);
+}
+
 .nav__btn:hover,
 .nav__btn:focus-visible {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
@@ -84,6 +88,6 @@ body {
   position: absolute;
   bottom: 0;
   right: 0;
-  color: white;
+  color: var(--cl-light);
   font-weight: 600;
 }
