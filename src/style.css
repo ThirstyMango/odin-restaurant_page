@@ -1,9 +1,6 @@
 /* Variables */
 :root {
-  --cl-main: rgb(255, 237, 219);
-  --cl-light: rgb(237, 205, 187);
-  --cl-secondary: rgb(191, 146, 112);
-  --cl-primary: rgb(191, 146, 112);
+  --cl-light: white;
   --cl-dark: rgb(97, 64, 39, 0.6);
   --spacing-xs: 0.2rem;
   --spacing-s: 0.4rem;
@@ -24,10 +21,10 @@ body {
 
 .container {
   width: 36rem;
+  padding: var(--spacing-m);
   background-color: var(--cl-dark);
   color: white;
   text-align: center;
-  padding: var(--spacing-m);
 }
 
 .header {
@@ -36,9 +33,8 @@ body {
 
 .header__brand {
   font-size: 3rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: var(--spacing-s);
-  text-transform: uppercase;
 }
 
 .header__subbrand {
@@ -46,20 +42,18 @@ body {
 }
 
 .nav {
-  display: flex;
-  justify-content: center;
   padding-top: var(--spacing-l);
 }
 
 .nav__btn {
-  cursor: pointer;
   height: 2rem;
   width: 6rem;
-  background-color: transparent;
+  cursor: pointer;
   border: none;
   border-right: 2px solid white;
   transition: 100ms all ease-in-out;
   outline: none;
+  background-color: transparent;
   color: white;
   font-weight: 600;
   font-size: 1.5rem;
@@ -69,6 +63,7 @@ body {
   border-left: 2px solid white;
 }
 
+.nav__btn--active,
 .nav__btn:hover,
 .nav__btn:focus-visible {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
@@ -82,4 +77,13 @@ body {
 
 .content__header {
   text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: white;
+  font-weight: 600;
 }
