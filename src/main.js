@@ -14,6 +14,7 @@ new (class Controller {
 
   cacheDom() {
     this.nav = document.querySelector(".nav");
+    this.btns = this.nav.querySelectorAll(".nav__btn");
     this.content = document.getElementById("content");
   }
 
@@ -24,9 +25,19 @@ new (class Controller {
   handleNavClick(e) {
     if (!e.target.dataset.page) return;
 
-    const pageName = e.target.dataset.page;
+    const btnClicked = e.target;
+    this.highlightButton(btnClicked);
+
+    const pageName = btnClicked.dataset.page;
     const page = this.pages[pageName]();
     this.render(page);
+  }
+
+  highlightButton(btn) {
+    Array.from(this.btns).forEach((btn) =>
+      btn.classList.remove("nav__btn--active")
+    );
+    btn.classList.add("nav__btn--active");
   }
 
   render(page) {
